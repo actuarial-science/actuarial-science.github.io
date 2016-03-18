@@ -8,5 +8,7 @@ Well. Finally got around to putting this old website together. Neat thing about 
 
 But where are my equations?
 
-$ \sum_{x=1}^100 x^2 $
+\[
+\sum_{x=1}^100 x^2
+\]
 
