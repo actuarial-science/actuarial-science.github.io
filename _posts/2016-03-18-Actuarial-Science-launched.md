@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "Start of the Actuarial Science blog."
 date: 2016-03-18
 ---
