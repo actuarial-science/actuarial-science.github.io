@@ -5,11 +5,6 @@ title: "Introduction to copulas"
 date: 2016-03-20
 ---
 
-Introduction to copulas
-================
-Paul
-9 March 2016
-
 Here is a quote from Paul Sweeting's ERM book:
 
 *"The marginal cumulative distributions are the inputs to the copula functions. These are essentially uniform distributions for each of the marginal variables."*
