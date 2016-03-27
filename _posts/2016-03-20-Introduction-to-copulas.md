@@ -16,7 +16,7 @@ x1 <- rnorm(10000)
 hist(x1, freq = FALSE, breaks = 30)
 ```
 
-![](IntroCopulas_files/figure-markdown_github/rnorm_plot-1.png)
+![](../images/rnorm_plot-1.png)
 
 If we feed these back into the cumulative distribution function, we generate a uniform distribution.
 
