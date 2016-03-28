@@ -25,7 +25,7 @@ y1 <- pnorm(x1)
 hist(y1, freq = FALSE, breaks = 30)
 ```
 
-![](IntroCopulas_files/figure-markdown_github/pnorm_plot-1.png)
+![](/images/pnorm_plot-1.png)
 
 Of course, this doesn't only work for the normal, it works for any distribution. For example:
 
@@ -34,14 +34,14 @@ x2 <- rexp(10000)
 hist(x2, freq = FALSE, breaks = 30)
 ```
 
-![](IntroCopulas_files/figure-markdown_github/rexp_plot-1.png)
+![](/images/rexp_plot-1.png)
 
 ``` r
 y2 <- pexp(x2)
 hist(y2, freq = FALSE, breaks = 30)
 ```
 
-![](IntroCopulas_files/figure-markdown_github/pexp_plot-1.png)
+![](/images/pexp_plot-1.png)
 
 This is what the next sentence means:
 
@@ -54,7 +54,7 @@ z1 <- qnorm(y1)
 hist(z1, freq = FALSE, breaks = 30)
 ```
 
-![](IntroCopulas_files/figure-markdown_github/norm_inv_transform-1.png)
+![](/images/norm_inv_transform-1.png)
 
 It looks like we've just gone round in a circle and achieved rather little. But let's look at some code that does something very similar in a bivariate situation. (The code below comes from <https://dahtah.wordpress.com/2011/10/28/hello-world/> and could do with being tidied up.)
 
@@ -68,14 +68,14 @@ xy <- rmvnorm(mean=c(0,0), sig=S, n=10000)
 pairs.panels(xy)
 ```
 
-![](IntroCopulas_files/figure-markdown_github/unnamed-chunk-1-1.png)
+![](/images/unnamed-chunk-1-1.png)
 
 ``` r
 uv <- pnorm(xy)
 pairs.panels(uv)
 ```
 
-![](IntroCopulas_files/figure-markdown_github/unnamed-chunk-1-2.png)
+![](/images/unnamed-chunk-1-2.png)
 
 We have already done most of the work to simulate a Gaussian copula: the (two-dimensional) distribution fuction of uv is just that.
 
@@ -93,7 +93,7 @@ for (i in 1:rast){
 persp(z=Cgau, theta=100, phi = 25, col = "skyblue", shade = 0.3)
 ```
 
-![](IntroCopulas_files/figure-markdown_github/unnamed-chunk-2-1.png)
+![](/images/unnamed-chunk-2-1.png)
 
 We can look at the correlation coefficients through the three steps and see that they are preserved (note the use of Kendal's tau as the measure of correlation - try changing the code to look at the behaviour of Pearson's rho and Spearman's rho).
 
@@ -117,7 +117,7 @@ y1 <- qgamma(uv[,2],shape = 4, scale = 1)
 pairs.panels(cbind(x1,y1))
 ```
 
-![](IntroCopulas_files/figure-markdown_github/unnamed-chunk-4-1.png)
+![](/images/unnamed-chunk-4-1.png)
 
 The transformation leaves Kendall's rank correlation unchanged (although the Pearson correlation coefficient rather ostentateously shown in the upper right boxes of the pairs plots is different from the original bivarate normal.)
 
