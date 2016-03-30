@@ -45,4 +45,7 @@ ul.posts li {
 h1.post_title {
     font-size: 2.0em;
 }
+code {
+    font-size: 1.5em;
+}
 }
