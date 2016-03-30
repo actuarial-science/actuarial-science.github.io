@@ -128,4 +128,4 @@ cor(x1, y1, method ="kendall")
     ## [1] 0.490854
 
 ---
-## Aknowledgements, references & further reading
+##Acknowledgements, references & further reading
