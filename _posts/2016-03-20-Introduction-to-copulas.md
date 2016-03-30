@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "Introduction to copulas"
-date: 2016-03-20
+date: 2016-03-30
 ---
 
 Here is a quote from Paul Sweeting's ERM book:
@@ -126,3 +126,6 @@ cor(x1, y1, method ="kendall")
 ```
 
     ## [1] 0.490854
+
+---
+## Aknowledgements, references & further reading
