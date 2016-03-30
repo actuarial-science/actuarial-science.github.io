@@ -127,5 +127,5 @@ cor(x1, y1, method ="kendall")
 
     ## [1] 0.490854
 
----
+
 ### Acknowledgements, references & further reading
