@@ -9,7 +9,7 @@ Here is a quote from Paul Sweeting's ERM book:
 
 *"The marginal cumulative distributions are the inputs to the copula functions. These are essentially uniform distributions for each of the marginal variables."*
 
-What does this second sentence mean? Let's start with a univariate normal distribution. Suppose we generate a bunch of normal random variables and plot the histogram.
+What does this second sentence mean? Let's start with a univariate distribution. Suppose we generate a bunch of normal random variables and plot the histogram.
 
 ``` r
 x1 <- rnorm(10000)
@@ -18,7 +18,7 @@ hist(x1, freq = FALSE, breaks = 30)
 
 ![](/images/rnorm_plot-1.png)
 
-If we feed these back into the cumulative distribution function, we generate a uniform distribution.
+If we feed these back into the normal cumulative distribution function, we simulate a uniform distribution.
 
 ``` r
 y1 <- pnorm(x1)
@@ -65,14 +65,14 @@ library(mvtnorm)
 library(psych)
 S <- matrix(c(1, 0.7, 0.7, 1), 2, 2) #Correlation matrix
 xy <- rmvnorm(mean=c(0,0), sig=S, n=10000)
-pairs.panels(xy)
+pairs.panels(xy, cex = 0.5, method = "pearson")
 ```
 
 ![](/images/unnamed-chunk-1-1.png)
 
 ``` r
 uv <- pnorm(xy)
-pairs.panels(uv)
+pairs.panels(uv, cex = 0.5, method = "pearson")
 ```
 
 ![](/images/unnamed-chunk-1-2.png)
@@ -114,12 +114,12 @@ The copula captures the dependency structure of the original data, as indicated 
 ``` r
 x1 <- qgamma(uv[,1],shape = 2, scale = 1) 
 y1 <- qgamma(uv[,2],shape = 4, scale = 1)
-pairs.panels(cbind(x1,y1))
+pairs.panels(cbind(x1,y1), cex = 0.5, method = "pearson")
 ```
 
 ![](/images/unnamed-chunk-4-1.png)
 
-The transformation leaves Kendall's rank correlation unchanged (although the Pearson correlation coefficient rather ostentateously shown in the upper right boxes of the pairs plots is different from the original bivarate normal.)
+The transformation leaves Kendall's rank correlation unchanged (although the Pearson correlation coefficient shown in the upper right boxes of the pairs plots is different from the original bivarate normal.)
 
 ``` r
 cor(x1, y1, method ="kendall")
